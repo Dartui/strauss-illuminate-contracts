@@ -1,0 +1,38 @@
+{
+    "name": "dartui/strauss-illuminate-contracts",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Dartui\\StraussIlluminateContracts\\": "src/"
+        }
+    },
+    "require": {
+        "brianhenryie/strauss": "dev-master",
+        "illuminate/support": "^12.10",
+        "illuminate/collections": "^12.10"
+    },
+    "scripts": {
+        "prefix-namespaces": [
+            "strauss",
+            "composer dump-autoload"
+        ],
+        "post-install-cmd": [
+            "@prefix-namespaces"
+        ],
+        "post-update-cmd": [
+            "@prefix-namespaces"
+        ]
+    },
+    "extra": {
+        "strauss": {
+            "target_directory": "dependencies",
+            "namespace_prefix": "StraussIlluminateContracts\\Deps\\",
+            "classmap_prefix": "SIC",
+            "exclude_from_copy": {
+                "packages": [
+                    "brianhenryie/strauss"
+                ]
+            }
+        }
+    }
+}
